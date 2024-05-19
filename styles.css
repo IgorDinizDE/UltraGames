@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #ff6600;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+main {
+    padding: 2rem;
+}
+#hero {
+    text-align: center;
+    background-color: #ffd700;
+    padding: 2rem;
+}
+#hero .button {
+    background-color: #ff6600;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+#features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.feature {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+.feature img {
+    max-width: 100%;
+}
+#faq {
+    margin-top: 2rem;
+}
+details {
+    margin-bottom: 1rem;
+}
+#contact {
+    margin-top: 2rem;
+}
+#contact form {
+    display: grid;
+    gap: 1rem;
+}
+footer {
+    background-color: #ff6600;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
