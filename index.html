@@ -1,83 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UltraGames</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>UltraGames - Jogo da Velha</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>UltraGames</h1>
-    </header>
-    <main>
-        <section id="hero">
-            <h2>Bem-vindo ao UltraGames</h2>
-            <p>Descubra os melhores jogos 2D de plataforma, ação, quebra-cabeças e lógica!</p>
-            <a href="#games" class="button">Explorar Jogos</a>
-        </section>
-        <section id="features">
-            <h2>Destaques</h2>
-            <div class="feature">
-                <img src="images/robot.png" alt="Robô jogando">
-                <h3>Jogos de Plataforma</h3>
-                <p>Desafie-se com nossos emocionantes jogos de plataforma 2D.</p>
+    <h1>Jogo da Velha</h1>
+    
+    <div id="settings">
+        <label for="player-choice">Escolha seu jogador:</label>
+        <select id="player-choice">
+            <option value="X">X</option>
+            <option value="O">O</option>
+        </select>
+
+        <label for="difficulty">Nível de Dificuldade:</label>
+        <select id="difficulty">
+            <option value="easy">Fácil</option>
+            <option value="medium">Médio</option>
+            <option value="hard">Difícil</option>
+        </select>
+
+        <button id="reset-score-button">Reiniciar Placar</button>
+    </div>
+
+    <div id="theme-settings">
+        <label for="theme-choice">Escolha o Tema:</label>
+        <select id="theme-choice">
+            <option value="default">Padrão</option>
+            <option value="dark">Escuro</option>
+            <option value="light">Claro</option>
+        </select>
+    </div>
+
+    <div id="main-content">
+        <div id="left-content">
+            <div id="scoreboard">
+                <div>Jogador X: <span id="scoreX">0</span></div>
+                <div>Jogador O: <span id="scoreO">0</span></div>
             </div>
-            <div class="feature">
-                <h3>Jogos de Ação</h3>
-                <p>Ação sem limites em nossos jogos eletrizantes.</p>
+
+            <div id="game-board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
             </div>
-            <div class="feature">
-                <h3>Quebra-cabeças</h3>
-                <p>Resolva quebra-cabeças intrigantes e teste sua mente.</p>
-            </div>
-            <div class="feature">
-                <h3>Jogos de Lógica</h3>
-                <p>Desenvolva suas habilidades de lógica com nossos jogos desafiadores.</p>
-            </div>
-        </section>
-        <section id="faq">
-            <h2>Perguntas Frequentes</h2>
-            <details>
-                <summary>Como posso acessar os jogos?</summary>
-                <p>Basta clicar na seção 'Explorar Jogos' para ver todas as opções disponíveis.</p>
-            </details>
-            <details>
-                <summary>Preciso criar uma conta?</summary>
-                <p>Não, você pode jogar diretamente sem a necessidade de criar uma conta.</p>
-            </details>
-            <details>
-                <summary>Os jogos são gratuitos?</summary>
-                <p>Sim, todos os nossos jogos são gratuitos para jogar.</p>
-            </details>
-            <details>
-                <summary>Posso jogar no meu celular?</summary>
-                <p>Sim, nosso site é otimizado para dispositivos móveis.</p>
-            </details>
-            <details>
-                <summary>Como reporto um problema com um jogo?</summary>
-                <p>Você pode nos enviar um e-mail em seu-email@exemplo.com.</p>
-            </details>
-            <details>
-                <summary>Existe uma comunidade de jogadores?</summary>
-                <p>Sim, temos uma comunidade ativa onde você pode interagir com outros jogadores.</p>
-            </details>
-        </section>
-        <section id="contact">
-            <h2>Entre em Contato</h2>
-            <form action="https://formspree.io/f/your-form-id" method="POST">
-                <label for="name">Nome</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="_replyto" required>
-                <label for="message">Mensagem</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>© 2023 UltraGames. All rights reserved.</p>
-    </footer>
+            
+            <button id="reset-button">Reiniciar Jogo</button>
+        </div>
+
+        <div id="right-content">
+            <h2>Histórico de Partidas</h2>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

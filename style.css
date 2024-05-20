@@ -1,0 +1,260 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('images/background.jpg'); /* Caminho para a imagem de plano de fundo */
+    background-size: cover; /* Para ajustar a imagem ao tamanho da tela */
+    background-position: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#settings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Adicione um fundo branco semitransparente */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#settings label {
+    margin-right: 10px;
+}
+
+#settings select {
+    margin-right: 20px;
+}
+
+#theme-settings {
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Adicione um fundo branco semitransparente */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#theme-settings label {
+    margin-right: 10px;
+}
+
+#theme-choice {
+    margin-right: 20px;
+}
+
+#reset-score-button {
+    margin-left: 20px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#reset-score-button:hover {
+    background-color: #e64a19;
+}
+
+#reset-score-button:active {
+    background-color: #d84315;
+}
+
+#main-content {
+    display: flex;
+    justify-content: center;
+}
+
+#left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+#right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Adicione um fundo branco semitransparente */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#scoreboard div {
+    font-size: 18px;
+}
+
+#history {
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Adicione um fundo branco semitransparente */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+    max-width: 200px;
+}
+
+#history-list li {
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Adicione um fundo branco semitransparente */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    border: 2px solid #000;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.cell:active {
+    background-color: #ddd;
+}
+
+.cell.win {
+    background-color: #ff0;
+}
+
+#reset-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#reset-button:hover {
+    background-color: #0056b3;
+}
+
+#reset-button:active {
+    background-color: #004085;
+}
+
+/* Tema Escuro */
+body.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark .cell {
+    background-color: #555;
+    color: #fff;
+}
+
+body.dark .cell:hover {
+    background-color: #666;
+}
+
+body.dark .cell.win {
+    background-color: #ff0;
+    color: #000;
+}
+
+body.dark #reset-button {
+    background-color: #007bff;
+    color: white;
+}
+
+body.dark #reset-button:hover {
+    background-color: #0056b3;
+}
+
+body.dark #reset-score-button {
+    background-color: #ff5722;
+    color: white;
+}
+
+body.dark #reset-score-button:hover {
+    background-color: #e64a19;
+}
+
+body.dark #history-list li {
+    color: #000;
+}
+
+/* Tema Claro */
+body.light {
+    background-color: #fff;
+    color: #000;
+}
+
+body.light .cell {
+    background-color: #f9f9f9;
+    color: #000;
+}
+
+body.light .cell:hover {
+    background-color: #e9e9e9;
+}
+
+body.light .cell.win {
+    background-color: #ff0;
+}
+
+body.light #reset-button {
+    background-color: #007bff;
+    color: white;
+}
+
+body.light #reset-button:hover {
+    background-color: #0056b3;
+}
+
+body.light #reset-score-button {
+    background-color: #ff5722;
+    color: white;
+}
+
+body.light #reset-score-button:hover {
+    background-color: #e64a19;
+}
+
+body.light #history-list li {
+    color: #000;
+}
